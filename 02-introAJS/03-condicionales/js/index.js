@@ -1,48 +1,43 @@
 //variables
-var nombreCompleto, añoNacimiento, añoActual, edad, cantidadCaracteres;
+var nombreCompleto, añoNacimiento, añoActual, edad, msg, cantidadCaracteres;
 
-nombreCompleto = prompt('Ingresa tu nombre');
-if (nombreCompleto == '' || typeof(nombreCompleto) == "number")
-{
-    alert('Necesitas escribir el dato faltante o no es del tipo correcto')
-}
+nombreCompleto = prompt('Ingresa tu nombre').toUpperCase().trim();
 añoNacimiento = Number(prompt('Ingresa tu año de nacimiento'));
-if (añoNacimiento == '' || typeof(añoNacimiento) != "number")
-{
-    alert('Necesitas escribir el año de nacimiento')
-}
-añoActual = Number(prompt('Ingresa tu año actual'));
-if (añoActual == '')
-{
-    alert('Necesitas escribir el año actual')
-}
+añoActual = Number(prompt('Ingresa el año de actual'));
 
-
-
-
-//proceso lógico
-if(nombreCompleto === '' || añoNacimiento === 0 || añoActual === 0 )
+//proceso logico
+if(nombreCompleto ==="" && añoActual === 0 && añoNacimiento === 0)
 {
-    msg = "Te faltaron datos, por favor ingrésalos todos"
+    msg = "Te faltaron datos por favor ingresalos todos"
 }
-else{
-    edad = añoActual - añoNacimiento;
-
-if (edad <= 12)
+else if(añoNacimiento > añoActual)
 {
-    msg = `Hola ${nombreCompleto} eres un niño`;
-}
-else if (edad > 12 && edad < 18)
-{
-    msg = `Hola ${nombreCompleto} eres un adulto`;
-}
-else if (edad >=18 < 65)
-{
-    msg = `Hola ${nombreCompleto} eres un adulto`;
+    msg = "Pilas el año nacimiento no puede ser mayor al actual"
 }
 else
 {
-    msg = `Hola ${nombreCompleto} eres un adulto mayor`
+    //obtener cantidad de caracteres de un string
+    cantidadCaracteres = nombreCompleto.length;
+    console.log(cantidadCaracteres);
+
+    edad = añoActual - añoNacimiento;
+
+    if(edad <= 12)
+    {
+        msg = `Hola ${nombreCompleto} tu eres un niño aun`;
+    }
+    else if (edad > 12 && edad <18)
+    {
+        msg = `Hola ${nombreCompleto} tu eres un adolecente`;
+    }
+    else if (edad >= 18 && edad < 65)
+    {
+        msg = `Hola ${nombreCompleto} tu eres un adulto`;
+    }
+    else
+    {
+        msg = `Hola ${nombreCompleto} tu eres un adulto mayor`;
+    }
 }
 
 
