@@ -28,14 +28,25 @@ function calcularEdad()
 
 document.getElementById('calcular').addEventListener('click', calcularEdad);
 
-function cambiarColor()
+function cambiarColorAzul()
+{
+    if(document.getElementById('cuerpo').style.backgroundColor = '#b2dfdb')
+    {
+        document.getElementById('cuerpo').style.backgroundColor = '#90caf9'
+    }
+}
+
+
+function cambiarColorVerde()
 {
     if(document.getElementById('cuerpo').style.backgroundColor = '#90caf9' )
     {
         document.getElementById('cuerpo').style.backgroundColor = '#b2dfdb';
     }
-    else if(document.getElementById('cuerpo').style.backgroundColor = '#b2dfdb' )
+    else(document.getElementById('cuerpo').style.backgroundColor = '#b2dfdb' )
     {
-        document.getElementById('cuerpo').style.backgroundColor = '#90caf9';
+        cambiarColorAzul();
     }
 }
+
+

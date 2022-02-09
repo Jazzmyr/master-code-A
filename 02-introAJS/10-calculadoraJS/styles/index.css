@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contenedor{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.cajacentro{
+    margin: 12%;
+}
