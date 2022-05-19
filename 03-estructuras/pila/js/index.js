@@ -26,6 +26,13 @@ class Pila{
     size(){
         return this.pila.length
     }
+    stackEmpty(){
+        if(this.pila[this.pila.length - 1]=== 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
 
@@ -39,6 +46,8 @@ console.log('peek', pila.peek());
 console.log('size', pila.size());
 
 console.log('pop', pila.pop());
+
+console.log('empty: ', pila.stackEmpty());
 
 console.log(pila.print());
 console.log(pila.peek());
